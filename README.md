@@ -66,7 +66,7 @@ Inspirations include Star Wars, AllBirds, Casper, and Warby Parker.
 TBD
 
 ## Backend Entity Relationship Diagram
-![erd](./assets/kyber-parker-erd.png)
+![erd](./assets/kyber-parker-erd-v2.png)
 
 ## Routes Inventory
 Updating..
@@ -91,3 +91,4 @@ Updating..
 1. [ ] Mobile/responsive design
 2. [ ] Customer Support Messaging
 3. [ ] Customer Loyalty Program: Force Points, Visualization, Credit on Orders
+4. [ ] React Lazy Loading
