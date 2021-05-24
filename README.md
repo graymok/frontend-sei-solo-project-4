@@ -79,8 +79,8 @@ Updating..
 
 ## MVP Checklist
 1. [ ] Build react frontend with minimal HTML & CSS
-2. [ ] Build flask backend with routes and Postgres database
-3. [ ] Build user authentication
+2. [x] Build flask backend with routes and Postgres database
+3. [x] Build user authentication
 4. [ ] Able to view all products
 5. [ ] Able to view single product details
 6. [ ] Able to add/remove items to/from cart and view current cart items
