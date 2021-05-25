@@ -12,25 +12,25 @@ const NavBar = (props) => {
     return (
         <>
             { user.name !== null ?
-        <nav className={styles.navContainer}>
-            <div className={styles.primary}>
-                <div className={styles.primaryNav}>
-                    <span className="nav-side-margin"></span>
+            <nav className={styles.navContainer}>
+                <div className={styles.primary}>
+                    <div className={styles.primaryNav}>
+                        <span className="nav-side-margin"></span>
+                    </div>
+                    <div className={styles.primaryLogo}>
+                        <NavLink className={styles.navLogo} to='/landing'>KYBER PARKER</NavLink>
+                    </div>
+                    <div className={styles.primaryNav}>
+                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/account'>Account</NavLink>
+                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
+                    </div>
                 </div>
-                <div className={styles.primaryLogo}>
-                    <NavLink className={styles.navLogo} to='/landing'>KYBER PARKER</NavLink>
+                <div className={styles.secondary}>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/single'>Single Crystal</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/double'>Double Crystal</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/about'>About</NavLink>
                 </div>
-                <div className={styles.primaryNav}>
-                    <NavLink className={styles.navLink} activeClassName="nav-active" to='/account'>Account</NavLink>
-                    <NavLink className={styles.navLink} activeClassName="nav-active" to='/cart'>Cart</NavLink>
-                </div>
-            </div>
-            <div className={styles.secondary}>
-                <NavLink className={styles.navLink} activeClassName="nav-active" to='/single'>Single Lightsaber</NavLink>
-                <NavLink className={styles.navLink} activeClassName="nav-active" to='/double'>Double Lightsaber</NavLink>
-                <NavLink className={styles.navLink} activeClassName="nav-active" to='/about'>About</NavLink>
-            </div>
-        </nav>                
+            </nav>                
             :
             <nav className={styles.navContainer}>
                 <div className={styles.primary}>
@@ -41,14 +41,14 @@ const NavBar = (props) => {
                         <NavLink className={styles.navLogo} to='/landing'>KYBER PARKER</NavLink>
                     </div>
                     <div className={styles.primaryNav}>
-                        <NavLink className={styles.navLink} activeClassName="nav-active" to='/login'>Login</NavLink>
-                        <NavLink className={styles.navLink} activeClassName="nav-active" to='/cart'>Cart</NavLink>
+                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/login'>Login</NavLink>
+                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
                     </div>
                 </div>
                 <div className={styles.secondary}>
-                    <NavLink className={styles.navLink} activeClassName="nav-active" to='/single'>Single Lightsaber</NavLink>
-                    <NavLink className={styles.navLink} activeClassName="nav-active" to='/double'>Double Lightsaber</NavLink>
-                    <NavLink className={styles.navLink} activeClassName="nav-active" to='/about'>About</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/single'>Single Crystal</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/double'>Double Crystal</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/about'>About</NavLink>
                 </div>
             </nav>    
             }
