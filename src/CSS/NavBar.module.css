@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: 10px;
+}
+
+.primaryLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 30%;
+}
+
+.primaryNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 30%;
+    margin-right: 15px; 
+}
+
+.secondary {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+}
+
+.navLogo {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    color: hsl(0, 0%, 30%);
+    text-decoration: none;
+}
+
+.navLink {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(0, 0%, 30%);
+    text-decoration: none;
+    margin: 15px;
+}
