@@ -21,13 +21,6 @@ function App() {
     <div className="main-container">
       <NavBar setName={setName} setEmail={setEmail} setPassword={setPassword} />
       <Route exact path='/' render={() => {
-          if ( user.name !== null ) {
-            return <Redirect to='/landing' />
-          } else {
-            return <Landing />
-          }
-        }} />
-        <Route path='/landing' render={() => {
           return <Landing />
         }} />
         <Route path='/login' render={() => {

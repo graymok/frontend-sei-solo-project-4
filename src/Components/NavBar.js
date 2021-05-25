@@ -18,7 +18,7 @@ const NavBar = (props) => {
                         <span className="nav-side-margin"></span>
                     </div>
                     <div className={styles.primaryLogo}>
-                        <NavLink className={styles.navLogo} to='/landing'>KYBER PARKER</NavLink>
+                        <NavLink className={styles.navLogo} to='/'>KYBER PARKER</NavLink>
                     </div>
                     <div className={styles.primaryNav}>
                         <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/account'>Account</NavLink>
@@ -38,7 +38,7 @@ const NavBar = (props) => {
                         <span className="nav-side-margin"></span>
                     </div>
                     <div className={styles.primaryLogo}>
-                        <NavLink className={styles.navLogo} to='/landing'>KYBER PARKER</NavLink>
+                        <NavLink className={styles.navLogo} to='/'>KYBER PARKER</NavLink>
                     </div>
                     <div className={styles.primaryNav}>
                         <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/login'>Login</NavLink>
