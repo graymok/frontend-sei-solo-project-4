@@ -1,0 +1,17 @@
+.navLink {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(0, 0%, 40%);
+    text-decoration: none;
+    margin: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.navLink:hover {
+    color: hsl(0, 0%, 15%);
+    cursor: pointer;
+}

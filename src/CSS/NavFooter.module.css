@@ -1,6 +1,10 @@
 .navContainer {
-    background-color: hsl(230, 15%, 97%);
+    background-color: hsl(230, 15%, 95%);
     height: 300px;
     width: 100vw;
     margin-top: 50px;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
