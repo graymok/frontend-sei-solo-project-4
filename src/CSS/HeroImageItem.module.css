@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.container {
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+
+.hero {
+    width: 80vw;
+    height: 500px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.caption {
+    font-family: 'Newsreader';
+    font-weight: 400;
+    font-size: 26px;
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    line-height: 1.5;
+    width: 30vw;
+    left: 5vw;
+}

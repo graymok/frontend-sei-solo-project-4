@@ -23,25 +23,27 @@ function App() {
   }, [])
 
   return (
-    <div className="main-container">
-      <NavBar setName={setName} setEmail={setEmail} setPassword={setPassword} />
-      <Route exact path='/' render={() => {
-          return <Landing />
-      }} />
-      <Route path='/login' render={() => {
-        if ( user.name !== null ) {
-          return <Redirect to='/' />
-        } else {
-          return <Registration name={name} setName={setName} email={email} setEmail={setEmail} password={password} setPassword={setPassword} />
-        }
-      }} />
-      <Route path='/account' render={() => {
-        if ( user.name !== null ) {
-          return <UserAccount setName={setName} setEmail={setEmail} setPassword={setPassword} />
-        } else {
-          return <Redirect to='/' />
-        }
-      }} />            
+    <div>
+      <div className="main-container">
+        <NavBar setName={setName} setEmail={setEmail} setPassword={setPassword} />
+        <Route exact path='/' render={() => {
+            return <Landing />
+        }} />
+        <Route path='/login' render={() => {
+          if ( user.name !== null ) {
+            return <Redirect to='/' />
+          } else {
+            return <Registration name={name} setName={setName} email={email} setEmail={setEmail} password={password} setPassword={setPassword} />
+          }
+        }} />
+        <Route path='/account' render={() => {
+          if ( user.name !== null ) {
+            return <UserAccount setName={setName} setEmail={setEmail} setPassword={setPassword} />
+          } else {
+            return <Redirect to='/' />
+          }
+        }} />  
+      </div>
       <NavFooter />
     </div>
   );

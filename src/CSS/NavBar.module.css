@@ -55,7 +55,7 @@
     margin: 10px;
 }
 
-.navLink, .btnForce {
+.navLink, .btnForce, .btnForceActive {
     font-family: 'Lato';
     font-weight: 400;
     font-size: 16px;
@@ -68,12 +68,22 @@
     padding-right: 8px;
 }
 
+.btnForce, .btnForceActive {
+    height: 19px;
+}
+
 .navLink:hover, .btnForce:hover {
     color: hsl(0, 0%, 15%);
 }
 
 .btnForce:hover {
     cursor: pointer;
+}
+
+.btnForceActive {
+    color: hsl(0, 0%, 15%);
+    border-bottom: 2px solid hsl(0, 0%, 30%);
+    padding-bottom: 16px;
 }
 
 .navActive {
@@ -85,10 +95,20 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    animation: fadein 0.5s ease-in;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .forceNav {
-    top: 45px;
+    top: 20px;
     background-color: hsl(230, 15%, 95%);
     display: flex;
     flex-direction: row;
@@ -122,6 +142,7 @@
     font-weight: 500;
     font-size: 16px;
     color: hsl(0, 0%, 40%);
+    text-decoration: none;
 }
 
 .forceCaptionLeft {
@@ -135,6 +156,5 @@
 }
 
 .forceCaptionLeft:hover, .forceCaptionRight:hover {
-    cursor: pointer;
     color: hsl(0, 0%, 15%);
 }

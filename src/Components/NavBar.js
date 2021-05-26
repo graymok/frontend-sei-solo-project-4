@@ -9,9 +9,7 @@ const NavBar = (props) => {
     const {userState} = useContext(UserContext)
     const [user, setUser] = userState
 
-    const [forceAffinity, setForceAffinity] = useState(false)
-    const [forceSingle, setForceSingle] = useState(false)
-    const [forceDouble, setForceDouble] = useState(false)
+    const [forceAffinity, setForceAffinity] = useState('')
 
     const darkURL = "https://i.pinimg.com/originals/7b/62/c9/7b62c9368c9b701f8182bc8af9cb13df.png"
     const lightURL = "https://i.pinimg.com/originals/8b/1d/b1/8b1db129a61fb67f791dec4a12cddc73.png"
@@ -20,28 +18,71 @@ const NavBar = (props) => {
         <>
             { user.name !== null ?
             <nav className={styles.navContainer}>
-                <div className={styles.primary}>
-                    <div className={styles.primaryNav}>
-                        <span className="nav-side-margin"></span>
+            <div className={styles.primary} onClick={() => {setForceAffinity('')}}>
+                <div className={styles.primaryNav}>
+                    <span className="nav-side-margin"></span>
+                </div>
+                <div className={styles.primaryLogo}>
+                    <NavLink className={styles.navLogo} to='/'>KYBER PARKER</NavLink>
+                </div>
+                <div className={styles.primaryNav}>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/about'>About</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/account'>Account</NavLink>
+                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
+                </div>
+            </div>
+            { forceAffinity === '' && 
+            <div className={styles.secondary}>
+                <span className={styles.btnForce} onClick={() => {setForceAffinity('single')}}>Single Crystal</span>
+                <span className={styles.btnForce} onClick={() => {setForceAffinity('double')}}>Double Crystal</span>
+            </div>                
+            }
+            { forceAffinity === 'single' && 
+            <div className={styles.secondary}>
+                <span className={styles.btnForceActive} onClick={() => {setForceAffinity('single')}}>Single Crystal</span>
+                <span className={styles.btnForce} onClick={() => {setForceAffinity('double')}}>Double Crystal</span>
+            </div>                
+            }
+            { forceAffinity === 'double' && 
+            <div className={styles.secondary}>
+                <span className={styles.btnForce} onClick={() => {setForceAffinity('single')}}>Single Crystal</span>
+                <span className={styles.btnForceActive} onClick={() => {setForceAffinity('double')}}>Double Crystal</span>
+            </div>                
+            }                                
+            { forceAffinity === 'single' && 
+            <div className={styles.forceMenu}>
+                <div className={styles.forceNav}>
+                    <div className={styles.forceBox}>
+                        <NavLink className={styles.forceCaptionLeft} to='/single/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
+                        <img className={styles.forceImg} src={lightURL}/>
                     </div>
-                    <div className={styles.primaryLogo}>
-                        <NavLink className={styles.navLogo} to='/'>KYBER PARKER</NavLink>
-                    </div>
-                    <div className={styles.primaryNav}>
-                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/about'>About</NavLink>
-                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/account'>Account</NavLink>
-                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
+                    <div className={styles.forceBox}> 
+                        <NavLink className={styles.forceCaptionRight} to='/single/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
+                        <img className={styles.forceImg} src={darkURL}/>
                     </div>
                 </div>
-                <div className={styles.secondary}>
-                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/single'>Single Crystal</NavLink>
-                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/double'>Double Crystal</NavLink>
-
+                <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
+            </div>
+            }
+            { forceAffinity === 'double' && 
+            <div className={styles.forceMenu}>
+                <div className={styles.forceNav}>
+                    <div className={styles.forceBox}>
+                        <NavLink className={styles.forceCaptionLeft} to='/double/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
+                        <img className={styles.forceImg} src={lightURL}/>
+                    </div>
+                    <div className={styles.forceBox}> 
+                        <NavLink className={styles.forceCaptionRight} to='/double/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
+                        <img className={styles.forceImg} src={darkURL}/>
+                    </div>
                 </div>
-            </nav>                
+                <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
+            </div>
+            }                
+        </nav>                
             :
             <nav className={styles.navContainer}>
-                <div className={styles.primary} onClick={() => {setForceAffinity(false)}}>
+                <div className={styles.primary} onClick={() => {setForceAffinity('')}}>
                     <div className={styles.primaryNav}>
                         <span className="nav-side-margin"></span>
                     </div>
@@ -54,26 +95,54 @@ const NavBar = (props) => {
                         <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
                     </div>
                 </div>
+                { forceAffinity === '' && 
                 <div className={styles.secondary}>
-                    <span className={styles.btnForce} onClick={() => {setForceAffinity(true)}}>Single Crystal</span>
-                    <span className={styles.btnForce} onClick={() => {setForceAffinity(true)}}>Double Crystal</span>
-
-                </div>
-                { forceAffinity === true && 
+                    <span className={styles.btnForce} onClick={() => {setForceAffinity('single')}}>Single Crystal</span>
+                    <span className={styles.btnForce} onClick={() => {setForceAffinity('double')}}>Double Crystal</span>
+                </div>                
+                }
+                { forceAffinity === 'single' && 
+                <div className={styles.secondary}>
+                    <span className={styles.btnForceActive} onClick={() => {setForceAffinity('single')}}>Single Crystal</span>
+                    <span className={styles.btnForce} onClick={() => {setForceAffinity('double')}}>Double Crystal</span>
+                </div>                
+                }
+                { forceAffinity === 'double' && 
+                <div className={styles.secondary}>
+                    <span className={styles.btnForce} onClick={() => {setForceAffinity('single')}}>Single Crystal</span>
+                    <span className={styles.btnForceActive} onClick={() => {setForceAffinity('double')}}>Double Crystal</span>
+                </div>                
+                }                                
+                { forceAffinity === 'single' && 
                 <div className={styles.forceMenu}>
                     <div className={styles.forceNav}>
                         <div className={styles.forceBox}>
-                            <span className={styles.forceCaptionLeft}>Shop Light Side</span>
+                            <NavLink className={styles.forceCaptionLeft} to='/single/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
                             <img className={styles.forceImg} src={lightURL}/>
                         </div>
                         <div className={styles.forceBox}> 
-                            <span className={styles.forceCaptionRight}>Shop Dark Side</span>
+                            <NavLink className={styles.forceCaptionRight} to='/single/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
                             <img className={styles.forceImg} src={darkURL}/>
                         </div>
                     </div>
-                    <div className={styles.forceBottom} onClick={() => {setForceAffinity(false)}}></div>
+                    <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
                 </div>
                 }
+                { forceAffinity === 'double' && 
+                <div className={styles.forceMenu}>
+                    <div className={styles.forceNav}>
+                        <div className={styles.forceBox}>
+                            <NavLink className={styles.forceCaptionLeft} to='/double/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
+                            <img className={styles.forceImg} src={lightURL}/>
+                        </div>
+                        <div className={styles.forceBox}> 
+                            <NavLink className={styles.forceCaptionRight} to='/double/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
+                            <img className={styles.forceImg} src={darkURL}/>
+                        </div>
+                    </div>
+                    <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
+                </div>
+                }                
             </nav>    
             }
 
