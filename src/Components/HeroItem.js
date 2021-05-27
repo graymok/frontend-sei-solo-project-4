@@ -9,8 +9,8 @@ const HeroItem = (props) => {
         <div className={styles.container}>
             <LazyLoadComponent>
                 <div className={styles.hero}>
-                    <span className={styles.text}>{props.landingQuote}</span>
-                    <span className={styles.author}>{props.landingQuoteAuthor}</span>
+                    <span className={styles.text}>{props.quote}</span>
+                    <span className={styles.author}>{props.author}</span>
                 </div>
             </LazyLoadComponent>
         </div>

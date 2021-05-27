@@ -8,7 +8,7 @@ const HeroImageItem = (props) => {
     return (
         <div className={styles.container}>
             <span className={styles.caption}>{props.caption}</span>
-            <LazyLoadImage className={styles.hero} src={props.imageSrc} alt={props.imageSrc} effect="opacity" />
+            <LazyLoadImage className={styles.hero} src={props.imageSrc} alt={props.imageAlt} effect="opacity" />
         </div>
     )
 }

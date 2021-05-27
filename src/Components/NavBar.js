@@ -7,7 +7,7 @@ import styles from '../CSS/NavBar.module.css'
 const NavBar = (props) => {
 
     const {userState} = useContext(UserContext)
-    const [user, setUser] = userState
+    const [user] = userState
 
     const [forceAffinity, setForceAffinity] = useState('')
 
@@ -54,11 +54,11 @@ const NavBar = (props) => {
                 <div className={styles.forceNav}>
                     <div className={styles.forceBox}>
                         <NavLink className={styles.forceCaptionLeft} to='/single/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
-                        <img className={styles.forceImg} src={lightURL}/>
+                        <img className={styles.forceImg} alt="Light Side Crystal" src={lightURL}/>
                     </div>
                     <div className={styles.forceBox}> 
                         <NavLink className={styles.forceCaptionRight} to='/single/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
-                        <img className={styles.forceImg} src={darkURL}/>
+                        <img className={styles.forceImg} alt="Dark Side Crystal" src={darkURL}/>
                     </div>
                 </div>
                 <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
@@ -69,11 +69,11 @@ const NavBar = (props) => {
                 <div className={styles.forceNav}>
                     <div className={styles.forceBox}>
                         <NavLink className={styles.forceCaptionLeft} to='/double/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
-                        <img className={styles.forceImg} src={lightURL}/>
+                        <img className={styles.forceImg} alt="Light Side Crystal" src={lightURL}/>
                     </div>
                     <div className={styles.forceBox}> 
                         <NavLink className={styles.forceCaptionRight} to='/double/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
-                        <img className={styles.forceImg} src={darkURL}/>
+                        <img className={styles.forceImg} alt="Dark Side Crystal" src={darkURL}/>
                     </div>
                 </div>
                 <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
@@ -118,11 +118,11 @@ const NavBar = (props) => {
                     <div className={styles.forceNav}>
                         <div className={styles.forceBox}>
                             <NavLink className={styles.forceCaptionLeft} to='/single/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
-                            <img className={styles.forceImg} src={lightURL}/>
+                            <img className={styles.forceImg} alt="Light Side Crystal" src={lightURL}/>
                         </div>
                         <div className={styles.forceBox}> 
                             <NavLink className={styles.forceCaptionRight} to='/single/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
-                            <img className={styles.forceImg} src={darkURL}/>
+                            <img className={styles.forceImg} alt="Dark Side Crystal" src={darkURL}/>
                         </div>
                     </div>
                     <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>
@@ -133,11 +133,11 @@ const NavBar = (props) => {
                     <div className={styles.forceNav}>
                         <div className={styles.forceBox}>
                             <NavLink className={styles.forceCaptionLeft} to='/double/light' onClick={() => {setForceAffinity('')}}>Shop Light Side</NavLink>
-                            <img className={styles.forceImg} src={lightURL}/>
+                            <img className={styles.forceImg} alt="Light Side Crystal" src={lightURL}/>
                         </div>
                         <div className={styles.forceBox}> 
                             <NavLink className={styles.forceCaptionRight} to='/double/dark' onClick={() => {setForceAffinity('')}}>Shop Dark Side</NavLink>
-                            <img className={styles.forceImg} src={darkURL}/>
+                            <img className={styles.forceImg} alt="Dark Side Crystal" src={darkURL}/>
                         </div>
                     </div>
                     <div className={styles.forceBottom} onClick={() => {setForceAffinity('')}}></div>

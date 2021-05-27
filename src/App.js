@@ -7,6 +7,9 @@ import NavFooter from './Components/NavFooter'
 import Landing from './Pages/Landing'
 import Registration from './Pages/Registration'
 import UserAccount from './Pages/UserAccount'
+import AllProducts from './Pages/AllProducts'
+import SingleProduct from './Pages/SingleProduct'
+import About from './Pages/About'
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
         <Route exact path='/' render={() => {
             return <Landing />
         }} />
+        <Route path='/about' render={() => {
+            return <About />
+        }} />        
         <Route path='/login' render={() => {
           if ( user.name !== null ) {
             return <Redirect to='/' />
@@ -42,7 +48,22 @@ function App() {
           } else {
             return <Redirect to='/' />
           }
-        }} />  
+        }} />
+        <Route exact path='/single/light' render={(routingProps) => {
+            return <AllProducts backEnd={routingProps.match.path} />
+        }} />
+        <Route exact path='/single/dark' render={(routingProps) => {
+            return <AllProducts backEnd={routingProps.match.path} />
+        }} />
+        <Route exact path='/double/light' render={(routingProps) => {
+            return <AllProducts backEnd={routingProps.match.path} />
+        }} />
+        <Route exact path='/double/dark' render={(routingProps) => {
+            return <AllProducts backEnd={routingProps.match.path} />
+        }} />
+        <Route exact path='/products/:id' render={(routingProps) => {
+            return <SingleProduct id={routingProps.match.params.id} />
+        }} />                            
       </div>
       <NavFooter />
     </div>
