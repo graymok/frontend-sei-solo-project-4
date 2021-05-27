@@ -22,7 +22,6 @@ const AllProducts = (props) => {
 
     const getProducts = async () => {
         let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}${props.backEnd}`)
-        console.log(response.data.products)
         setProducts(response.data.products)
     }
 

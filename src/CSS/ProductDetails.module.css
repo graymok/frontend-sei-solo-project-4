@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+}
+
+.image {
+    object-fit: contain;
+    height: 400px;
+    width: 400px;
+}
+
+.txtContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 320px;
+
+}
+
+.headline {
+    font-family: 'Newsreader';
+    font-size: 32px;
+    color: hsl(0, 0%, 15%);
+    margin-bottom: 20px;
+}
+
+.line {
+    border-bottom: 2px solid hsl(0, 0%, 15%);
+    width: 25px;
+    margin-bottom: 40px;
+}
+
+.description, .price, .addCart, .login {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 15%);
+}
+
+.login {
+    font-style: italic;
+    color: hsl(0, 0%, 40%);
+    text-decoration: none;
+}
+
+.login:hover {
+    color: hsl(0, 0%, 15%);
+    text-decoration: underline;
+}
+
+.addCart {
+    border: 1px solid hsl(0, 0%, 40%);
+    color: hsl(0, 0%, 40%);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.addCart:hover {
+    border: 1px solid hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 15%);
+    cursor: pointer;    
+}
+
+.button {
+    margin-top: 15px;
+    width: 320px;
+    border: 1px solid white;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    height: 50px;
+    background-color: hsl(0, 0%, 70%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 50%);
+}

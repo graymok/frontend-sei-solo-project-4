@@ -91,8 +91,7 @@ const NavBar = (props) => {
                     </div>
                     <div className={styles.primaryNav}>
                         <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/about'>About</NavLink>
-                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/login'>Login</NavLink>
-                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
+                        <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/signin'>Sign in</NavLink>
                     </div>
                 </div>
                 { forceAffinity === '' && 
