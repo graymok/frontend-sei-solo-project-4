@@ -26,7 +26,7 @@ const AllOrders = () => {
     return (
         <div className={styles.container}>
             { orders.length === 0 ? 
-            <div>Retrieving orders</div>
+            <div className={styles.empty}>No orders</div>
             :
             <div className={styles.orderContainer}>
                 <span className={styles.headline}>Orders</span>
