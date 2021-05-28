@@ -1,22 +1,25 @@
-import { UserContext } from '../Context/UserContext'
 import { CartContext } from '../Context/CartContext'
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import styles from '../CSS/ShoppingCart.module.css'
 import CartItem from '../Components/CartItem'
+import { NavLink } from 'react-router-dom'
 
 
 const ShoppingCart = () => {
 
-    const {userState} = useContext(UserContext)
-    const [user] = userState
     const {cartState, getCart, totalState} = useContext(CartContext)
-    const [cart, setCart] = cartState
+    const [cart] = cartState
     const [total] = totalState
 
     useEffect(() => {
         getCart()
       // eslint-disable-next-line react-hooks/exhaustive-deps  
       }, [])
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    // eslint-disable-next-line react-hooks/exhaustive-deps          
+    }, []) 
 
     return (
         <div className={styles.container}>
@@ -36,13 +39,12 @@ const ShoppingCart = () => {
             }
             { cart.length > 0 && 
             <div className={styles.tableTotal}>
-                <span className={styles.tableHeader}></span>
-                <span className={styles.tableHeader}></span>
-                <span className={styles.tableHeader}></span>
-                <span className={styles.tableHeader}></span>
-                <span className={styles.tableHeader}>Total: ${total}</span>
+                <span className={styles.tableHeaderTotal}>Order Total: ${total}</span>
             </div>            
-            }            
+            }
+            { cart.length > 0 && 
+            <NavLink to='/checkout' className={styles.button}>Checkout</NavLink>            
+            }                        
         </div>
     )
 }

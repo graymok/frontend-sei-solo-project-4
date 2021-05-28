@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    padding: 50px;
+}
+
+.shipping, .billing, .summary {
+    min-width: 450px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 5px;
+}
+
+.summary {
+    min-width: 200px;
+}
+
+.codes {
+    display: flex;
+    flex-direction: row;
+}
+
+.headline {
+    font-family: 'Lato';
+    font-weight: 700;
+    color: hsl(0, 0%, 40%);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato';
+}
+
+.field, .fieldMini {
+    font-family: 'Lato';
+    color: hsl(0, 0%, 30%);
+    font-size: 14px;
+    width: 300px;
+    height: 35px;
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 95%);
+    border-radius: 2px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.fieldMini {
+    width: 86px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.field:focus, .fieldMini:focus {
+    outline-color: hsl(0, 0%, 80%);
+    outline-width: 1px;
+}
+
+.containerAuto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button, .buttonAuto {
+    margin-top: 15px;
+    width: 320px;
+    border: 1px solid white;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    height: 50px;
+    background-color: hsl(0, 0%, 70%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.buttonAuto {
+    width: 159px;
+}
+
+.button:hover, .buttonAuto:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 50%);
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.tableItem, .tablePrice, .total {
+    color: hsl(0, 0%, 30%);
+}
+
+.tableItem {
+    width: 70%;
+    text-align: left;
+}
+
+.tablePrice {
+    width: 30%;
+    text-align: right;
+}
+
+.total {
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,6 +1,6 @@
 import { UserContext } from '../Context/UserContext'
 import { CartContext } from '../Context/CartContext'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from '../CSS/ProductDetails.module.css'
 

@@ -28,8 +28,28 @@ const UserProvider = ({children}) => {
         }
     }
 
+    const [address, setAddress] = useState('')
+    const [city, setCity] = useState('')
+    const [stateAddress, setStateAddress] = useState('')
+    const [zipcode, setZipcode] = useState('')
+
+    const [creditCard, setCreditCard] = useState('')
+    const [creditCode, setCreditCode] = useState('')
+    const [creditZip, setCreditZip] = useState('')
+    const [creditExpiryMonth, setCreditExpiryMonth] = useState('')
+    const [creditExpiryYear, setCreditExpiryYear] = useState('')
+
     const state = {
         userState: [user, setUser],
+        addressState: [address, setAddress],
+        cityState: [city, setCity],
+        stateAddressState: [stateAddress, setStateAddress],
+        zipcodeState: [zipcode, setZipcode],
+        creditCardState: [creditCard, setCreditCard],
+        creditCodeState: [creditCode, setCreditCode],
+        creditZipState: [creditZip, setCreditZip],
+        creditExpiryMonthState: [creditExpiryMonth, setCreditExpiryMonth],
+        creditExpiryYearState: [creditExpiryYear, setCreditExpiryYear],
         verifyUser: verifyUser
     }
 

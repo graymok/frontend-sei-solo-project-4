@@ -17,7 +17,6 @@ const CartProvider = ({children}) => {
         let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cart`, {
             headers: { Authorization: user.id }
         })
-        console.log('Retrieved cart', response)
         response.data.cart_products.map((item) => {
             orderSum = orderSum + item.product_info.price
         })
@@ -31,7 +30,6 @@ const CartProvider = ({children}) => {
         }, {
             headers: { Authorization: user.id }
         })
-        console.log('Added to cart', response)
         getCart()
     }
     
@@ -41,7 +39,6 @@ const CartProvider = ({children}) => {
         }, {
             headers: { Authorization: user.id }
         })
-        console.log('Removed from cart', response)
         getCart()
     }
 

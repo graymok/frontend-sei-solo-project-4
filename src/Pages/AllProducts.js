@@ -30,6 +30,11 @@ const AllProducts = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps          
     }, [])
 
+    useEffect(() => {
+        window.scrollTo(0,0)
+    // eslint-disable-next-line react-hooks/exhaustive-deps          
+    }, [])
+
     return (
         <div className={styles.container}>
             { props.backEnd === '/single/light' && 

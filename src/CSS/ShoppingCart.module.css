@@ -18,7 +18,7 @@
     margin-top: 50px;
 }
 
-.tableHeader {
+.tableHeader, .tableHeaderTotal {
     width: 8vw;
     font-family: 'Lato';
     font-weight: 400;
@@ -27,11 +27,18 @@
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.tableHeader {
     border-bottom: 1px solid hsl(0, 0%, 30%);
     border-top: 1px solid hsl(0, 0%, 30%);
     background-color: hsl(230, 35%, 95%);
 }
 
+.tableHeaderTotal {
+    width: 100%;
+    font-size: 16px;
+}
 
 .empty {
     padding: 20px;
@@ -47,4 +54,26 @@
     flex-direction: column;
     justify-content: center;
     background-color: hsl(230, 35%, 95%);
+}
+
+.button {
+    margin-top: 15px;
+    width: 320px;
+    border: 1px solid white;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    height: 50px;
+    background-color: hsl(0, 0%, 70%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 50%);
 }

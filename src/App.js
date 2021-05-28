@@ -11,6 +11,8 @@ import AllProducts from './Pages/AllProducts'
 import SingleProduct from './Pages/SingleProduct'
 import About from './Pages/About'
 import ShoppingCart from './Pages/ShoppingCart'
+import Checkout from './Pages/Checkout'
+import OrderComplete from './Pages/OrderComplete'
 
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
         <Route path='/about' render={() => {
             return <About />
         }} />        
-        <Route path='/signin' render={(routingProps) => {
+        <Route path='/signin' render={() => {
           if ( user.name !== null ) {
             return history.goBack()
           } else {
@@ -52,6 +54,13 @@ function App() {
             return <Redirect to='/' />
           }
         }} />
+        <Route path='/checkout' render={() => {
+          if ( user.name !== null ) {
+            return <Checkout />
+          } else {
+            return <Redirect to='/' />
+          }
+        }} />        
         <Route exact path='/single/light' render={(routingProps) => {
             return <AllProducts backEnd={routingProps.match.path} />
         }} />
@@ -73,7 +82,14 @@ function App() {
           } else {
             return <Redirect to='/' />
           }
-        }} />                                    
+        }} />
+        <Route path='/complete' render={() => {
+          if ( user.name !== null ) {
+            return <OrderComplete />
+          } else {
+            return <Redirect to='/' />
+          }
+        }} />                                            
       </div>
       <NavFooter />
     </div>

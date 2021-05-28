@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
 .navContainer {
     background-color: hsl(230, 15%, 95%);
     height: 300px;
@@ -6,4 +8,51 @@
     left: 0;
     right: 0;
     bottom: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.disclaimer {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 13px;
+    font-style: italic;
+    color: hsl(0, 0%, 45%);
+}
+
+.footerContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.footerTitle {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 13px;
+    color: hsl(0, 0%, 45%);
+    line-height: 3;
+}
+
+.footerText {
+    font-family: 'Lato';
+    font-size: 15px;
+    text-decoration: underline;
+    color: hsl(0, 0%, 35%);
+    line-height: 2;
+}
+
+.footerText:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 15%);
 }

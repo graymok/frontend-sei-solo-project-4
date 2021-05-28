@@ -1,16 +1,12 @@
-import { UserContext } from '../Context/UserContext'
 import { CartContext } from '../Context/CartContext'
-import { useContext, useState, useEffect } from 'react'
+import { useContext } from 'react'
 import styles from '../CSS/CartItem.module.css'
 
 
 const CartItem = () => {
 
-    const {userState} = useContext(UserContext)
-    const [user] = userState
-    const {cartState, getCart, totalState, removeFromCart} = useContext(CartContext)
-    const [cart, setCart] = cartState
-    const [total] = totalState
+    const {cartState, removeFromCart} = useContext(CartContext)
+    const [cart] = cartState
 
 
     return (
