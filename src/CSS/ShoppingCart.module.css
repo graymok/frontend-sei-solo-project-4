@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.table, .tableTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.tableTotal {
+    margin-top: 50px;
+}
+
+.tableHeader {
+    width: 8vw;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(0, 0%, 15%);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 30%);
+    border-top: 1px solid hsl(0, 0%, 30%);
+    background-color: hsl(230, 35%, 95%);
+}
+
+
+.empty {
+    padding: 20px;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    font-style: italic;
+    color: hsl(0, 0%, 30%);
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(230, 35%, 95%);
+}

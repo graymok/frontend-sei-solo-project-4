@@ -1,4 +1,5 @@
 import { UserContext } from '../Context/UserContext'
+import { CartContext } from '../Context/CartContext'
 import { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from '../CSS/ProductDetails.module.css'
@@ -7,6 +8,7 @@ const ProductDetails = (props) => {
 
     const {userState} = useContext(UserContext)
     const [user] = userState
+    const {addToCart} = useContext(CartContext)
 
 
 
@@ -20,7 +22,7 @@ const ProductDetails = (props) => {
                 <span className={styles.price}>${props.product.price}</span>
                 
                 { user.name !== null ?
-                <span className={styles.button}>Add to cart</span> 
+                <span className={styles.button} onClick={() => {addToCart(props.product.id)}}>Add to cart</span> 
                 :
                 <NavLink className={styles.button} to='/signin'>Sign in to purchase</NavLink>
                 }

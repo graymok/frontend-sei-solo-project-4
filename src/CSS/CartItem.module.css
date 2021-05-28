@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.tableItem, .tableRemove {
+    width: 8vw;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(0, 0%, 30%);
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.tableRemove {
+    text-decoration: underline;
+}
+
+.tableRemove:hover {
+    cursor: pointer;
+}

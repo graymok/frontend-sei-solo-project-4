@@ -10,6 +10,7 @@ import UserAccount from './Pages/UserAccount'
 import AllProducts from './Pages/AllProducts'
 import SingleProduct from './Pages/SingleProduct'
 import About from './Pages/About'
+import ShoppingCart from './Pages/ShoppingCart'
 
 
 function App() {
@@ -65,7 +66,14 @@ function App() {
         }} />
         <Route exact path='/products/:id' render={(routingProps) => {
             return <SingleProduct id={routingProps.match.params.id} />
-        }} />                            
+        }} />
+        <Route path='/cart' render={() => {
+          if ( user.name !== null ) {
+            return <ShoppingCart />
+          } else {
+            return <Redirect to='/' />
+          }
+        }} />                                    
       </div>
       <NavFooter />
     </div>

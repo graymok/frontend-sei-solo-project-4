@@ -1,62 +1,48 @@
 import { useContext, useState, createContext } from 'react'
 import axios from 'axios'
-import { UserContext } from '../contexts/UserContext'
+import { UserContext } from './UserContext'
 
 const CartContext = createContext()
 
 const CartProvider = ({children}) => {
-    // contexts
     const {userState} = useContext(UserContext)
     const [user] = userState
 
     const [cart, setCart] = useState([])
-    const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState(0)
 
-    let orderTotal = 0;
+    let orderSum = 0
 
-    // functions
-
-    // get cart
-    const getCart = async () =>
-    {
-        // grab cart
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cart`, {
+    const getCart = async () => {
+        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cart`, {
             headers: { Authorization: user.id }
         })
-        // console.log(response)
-        response.data.cart.map((item) => {
-            orderTotal = orderTotal + item.product.price
+        console.log('Retrieved cart', response)
+        response.data.cart_products.map((item) => {
+            orderSum = orderSum + item.product_info.price
         })
-        setTotal(orderTotal);
-        // set cart to state
-        setCart(response.data.cart);
+        setTotal(orderSum)
+        setCart(response.data.cart_products)
     }
 
-    // add item to cart
-    const addToCart = async (productId) =>
-    {
-        // create item
-        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/cart/add`, {
-            productId: productId
+    const addToCart = async (productId) => {
+        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/cart/add`, {
+            product_id: productId
         }, {
             headers: { Authorization: user.id }
         })
-        console.log(response.data.addItem);
-        getCart();
+        console.log('Added to cart', response)
+        getCart()
     }
     
-    // remove item from cart
-    const removeFromCart = async (createdAt) =>
-    {
-        // delete item
-        const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/cart/delete`, {
-            headers: { Authorization: user.id },
-            data: {
-                createdAt: createdAt
-            }
+    const removeFromCart = async (cartId) => {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/cart/remove`, {
+            cartId: cartId
+        }, {
+            headers: { Authorization: user.id }
         })
-        console.log(response.data.message);
-        getCart();
+        console.log('Removed from cart', response)
+        getCart()
     }
 
     const state = {
@@ -64,7 +50,7 @@ const CartProvider = ({children}) => {
         getCart,
         addToCart,
         removeFromCart,
-        totalState: [total, setTotal]
+        totalState: [total, setTotal],
     }
 
     return (
