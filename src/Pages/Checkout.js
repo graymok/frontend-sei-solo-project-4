@@ -22,15 +22,17 @@ const Checkout = () => {
     const [creditExpiryMonth, setCreditExpiryMonth] = creditExpiryMonthState
     const [creditExpiryYear, setCreditExpiryYear] = creditExpiryYearState
 
-    const {cartState, totalState} = useContext(CartContext)
+    const {cartState, totalState, cartCountState} = useContext(CartContext)
     const [cart, setCart] = cartState
     const [total] = totalState
+    const [cartCount, setCartCount] = cartCountState
 
     const [redirect, setRedirect] = useState(false)
 
     const handleCheckout = () => {
         createOrder()
         setCart([])
+        setCartCount(0)
         setRedirect(true)
     }
 

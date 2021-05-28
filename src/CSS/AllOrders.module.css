@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.orderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline {
+    font-family: 'Lato';
+    font-weight: 700;
+    color: hsl(0, 0%, 40%);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.orderNav {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.orderItem {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(0, 0%, 30%);
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.orderItem:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 15%);
+}
+

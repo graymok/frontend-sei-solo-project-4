@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react'
 import { UserContext } from '../Context/UserContext'
 import styles from '../CSS/UserAccount.module.css'
+import { NavLink } from 'react-router-dom'
 
 const UserAccount = (props) => {
 
@@ -14,6 +15,7 @@ const UserAccount = (props) => {
 
     return (
         <div className={styles.container}>
+            <NavLink className={styles.navLink} to='/orders'>Orders</NavLink>
             <span className={styles.navLink} onClick={() => {
                 localStorage.removeItem('userId')
                 setUser({

@@ -13,6 +13,8 @@ import About from './Pages/About'
 import ShoppingCart from './Pages/ShoppingCart'
 import Checkout from './Pages/Checkout'
 import OrderComplete from './Pages/OrderComplete'
+import AllOrders from './Pages/AllOrders'
+import SingleOrder from './Pages/SingleOrder'
 
 
 function App() {
@@ -89,7 +91,21 @@ function App() {
           } else {
             return <Redirect to='/' />
           }
-        }} />                                            
+        }} />
+        <Route exact path='/orders' render={() => {
+          if ( user.name !== null ) {
+            return <AllOrders />
+          } else {
+            return <Redirect to='/' />
+          }
+        }} />
+        <Route exact path='/orders/:id' render={(routingProps) => {
+          if ( user.name !== null ) {
+            return <SingleOrder id={routingProps.match.params.id} />
+          } else {
+            return <Redirect to='/' />
+          }
+        }} />                                                             
       </div>
       <NavFooter />
     </div>

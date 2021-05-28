@@ -8,7 +8,7 @@ const ProductListing = (props) => {
                 <div className={styles.container} key={item.id}>
                     <img className={styles.image} src={item.image} alt={item.name} />
                     <div className={styles.txtContainer}>
-                        <NavLink className={styles.name} exact to ={`/products/${item.id}`}>{item.name}</NavLink>
+                        <NavLink className={styles.name} exact to={`/products/${item.id}`}>{item.name}</NavLink>
                     </div>
                 </div>
             ))}

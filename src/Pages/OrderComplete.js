@@ -1,7 +1,13 @@
 import styles from '../CSS/OrderComplete.module.css'
 import HeroImageItem from '../Components/HeroImageItem'
+import { useEffect } from 'react'
 
 const OrderComplete = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    // eslint-disable-next-line react-hooks/exhaustive-deps          
+    }, [])
 
     const imageSrc = "https://img.cinemablend.com/filter:scale/quill/2/1/e/5/e/3/21e5e394036c0c037e58821175a607fb0ec8455b.png?fw=1200"
     const imageAlt = "Baby Yoda"
