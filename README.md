@@ -73,22 +73,36 @@ Updating..
 
 | Verb | Path | Route Summary |
 | --- | --- | --- |
+| `GET` | `/` | Root message |
 | `GET` | `/users/verify` | Verify user |
 | `POST` | `/users/register` | Register new user |
 | `POST` | `/users/login` | Login existing user |
+| `GET` | `/products/:id` | Get single product |
+| `GET` | `/single/light` | Get single crystals with light side |
+| `GET` | `/double/light` | Get double crystals with light side |
+| `GET` | `/single/dark` | Get single crystals with dark side |
+| `GET` | `/double/dark` | Get double crystals with dark side |
+| `GET` | `/cart` | Retrieve user's cart |
+| `POST` | `/cart/add` | Add product to user's cart |
+| `POST` | `/cart/remove` | Remove product from user's cart |
+| `GET` | `/orders/:id` | Get single order |
+| `GET` | `/orders/` | Get all orders |
+| `POST` | `/orders/new` | Create new order |
 
 ## MVP Checklist
-1. [ ] Build react frontend with minimal HTML & CSS
+1. [x] Build react frontend with minimal HTML & CSS
 2. [x] Build flask backend with routes and Postgres database
 3. [x] Build user authentication
-4. [ ] Able to view all products
-5. [ ] Able to view single product details
-6. [ ] Able to add/remove items to/from cart and view current cart items
-7. [ ] Able to submit an order of products and view all past orders
-8. [ ] Able to view single order details
+4. [x] Able to view all products
+5. [x] Able to view single product details
+6. [x] Able to add/remove items to/from cart and view current cart items
+7. [x] Able to submit an order of products and view all past orders
+8. [x] Able to view single order details
 
 ## Stretch Goals
-1. [ ] Mobile/responsive design
-2. [ ] Customer Support Messaging
-3. [ ] Customer Loyalty Program: Force Points, Visualization, Credit on Orders
-4. [ ] React Lazy Loading
+1. [x] React Lazy Loading
+2. [x] CSS Modules
+3. [ ] Mobile/responsive design
+4. [ ] Customer Support Messaging
+5. [ ] Customer Loyalty Program: Force Points, Visualization, Credit on Orders
+
