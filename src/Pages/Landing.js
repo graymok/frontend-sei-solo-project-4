@@ -1,5 +1,6 @@
 import HeroImage from '../Components/HeroImage'
 import HeroItem from '../Components/HeroItem'
+import styles from '../CSS/Landing.module.css'
 
 const Landing = () => {
 
@@ -14,7 +15,8 @@ const Landing = () => {
         <>
             <HeroImage imageSrc={landingRey} imageAlt={"Hero Image 1"} />
             <HeroItem quote={landingQuote} author={landingQuoteAuthor} />
-            <HeroImage imageSrc={landingKylo} imageAlt={"Hero Image 2"} />            
+            <HeroImage imageSrc={landingKylo} imageAlt={"Hero Image 2"} />
+            <div className={styles.buffer}></div>            
         </>
     )
 }

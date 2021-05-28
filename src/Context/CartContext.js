@@ -10,6 +10,7 @@ const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)
+    const [cartCount, setCartCount] = useState(0)
 
     let orderSum = 0
 
@@ -20,6 +21,7 @@ const CartProvider = ({children}) => {
         response.data.cart_products.map((item) => {
             orderSum = orderSum + item.product_info.price
         })
+        setCartCount(response.data.cart_count)
         setTotal(orderSum)
         setCart(response.data.cart_products)
     }
@@ -48,6 +50,7 @@ const CartProvider = ({children}) => {
         addToCart,
         removeFromCart,
         totalState: [total, setTotal],
+        cartCountState: [cartCount, setCartCount]
     }
 
     return (

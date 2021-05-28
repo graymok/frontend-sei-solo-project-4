@@ -1,6 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@500;700&family=Newsreader&family=Raleway:ital,wght@0,500;1,500&display=swap');
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.aboutMeText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.aboutMeImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.headline {
+    font-family: 'Newsreader';
+    font-size: 22px;
+    color: hsl(0, 0%, 15%);
+    line-height: 2;
+}
+
+.text, .textLinks {
+    font-family: 'Lato';
+    font-size: 15px;
+    color: hsl(0, 0%, 15%);
+    margin-bottom: 20px;
+    line-height: 1.3;
 }

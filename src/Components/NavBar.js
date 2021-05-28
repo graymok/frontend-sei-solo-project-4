@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { UserContext } from '../Context/UserContext'
+import { CartContext } from '../Context/CartContext'
 import { useState, useContext } from 'react'
 import styles from '../CSS/NavBar.module.css'
 
@@ -8,6 +9,9 @@ const NavBar = (props) => {
 
     const {userState} = useContext(UserContext)
     const [user] = userState
+
+    const {cartCountState} = useContext(CartContext)
+    const [cartCount] = cartCountState
 
     const [forceAffinity, setForceAffinity] = useState('')
 
@@ -28,7 +32,8 @@ const NavBar = (props) => {
                 <div className={styles.primaryNav}>
                     <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/about'>About</NavLink>
                     <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/account'>Account</NavLink>
-                    <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink>
+                    { cartCount === 0 && <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart</NavLink> }
+                    { cartCount > 0 && <NavLink className={styles.navLink} activeClassName={styles.navActive} to='/cart'>Cart ({cartCount})</NavLink>}
                 </div>
             </div>
             { forceAffinity === '' && 
