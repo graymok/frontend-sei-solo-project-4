@@ -1,5 +1,11 @@
 # Kyber Parker
 
+## Repository Links
+* <a href="https://github.com/graymok/frontend-sei-solo-project-4">Frontend repository</a>
+* <a href="https://github.com/graymok/backend-sei-solo-project-4">Backend repository</a>
+
+## Heroku Deployment
+* <a href="https://kyber-parker.herokuapp.com/">Kyber Parker</a>
 
 ## Overview
 Kyber Parker is a boutique, direct-to-consumer company that sells reclaimed kyber crystals to force wielders looking to craft a high-quality lightsaber.
@@ -24,7 +30,6 @@ Inspirations include Star Wars, AllBirds, Casper, and Warby Parker.
 * 5/27: frontend done, backend done
 
 ## Expected Challenges
-* Stripe API integration with Flask backend
 * Managing JS and Python in same project
 
 ## Wireframes
@@ -62,15 +67,10 @@ Inspirations include Star Wars, AllBirds, Casper, and Warby Parker.
 14. When I select complete checkout, I can review my order in my account.
 15. When I select my account, I can review my orders, my user information, my addressed, and I can logout.
 
-## Frontend Component Diagram
-TBD
-
 ## Backend Entity Relationship Diagram
 ![erd](./assets/kyber-parker-erd-v2.png)
 
 ## Routes Inventory
-Updating..
-
 | Verb | Path | Route Summary |
 | --- | --- | --- |
 | `GET` | `/` | Root message |
@@ -105,4 +105,5 @@ Updating..
 3. [ ] Mobile/responsive design
 4. [ ] Customer Support Messaging
 5. [ ] Customer Loyalty Program: Force Points, Visualization, Credit on Orders
+6. [ ] Stripe API Integration
 
